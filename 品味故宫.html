@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<style>
+			body {
+				margin: 0;
+				width: 100vw;
+				height: 900px;
+				background: linear-gradient(to bottom right, #c19a68,#a52a2a);
+			}
+            .tiaozhuan a{
+				color: gainsboro;
+				text-decoration: none;
+			}
+			.tiaozhuan{
+				width: 100px;
+				height: 30px;
+				margin-left: 100px;
+				margin-top: 20px;
+				font-size: small;
+				color: whitesmoke;
+			}
+			.box {
+				width: 1200px;
+				margin: auto;
+				padding-top: 80px;
+			}
+
+			.box>.title {
+				display: flex;
+				justify-content: space-between;
+				margin-bottom: 50px;
+			}
+
+			.box>.title>.item {
+				background: linear-gradient(to bottom right, #c19a68,#a52a2a);
+				height: 80px;
+				width: 20%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 28px;
+				box-shadow: 0 0 10px #fff;
+				cursor: pointer;
+			}
+
+			.box>.title>.item>img {
+				width: 70px;
+				height: 70px;
+				border-radius: 100%;
+				transition: .5s;
+				object-fit: cover;
+			}
+
+			.box>.title>.item>span {
+				color: #fff;
+				font-size: 18px;
+				letter-spacing: 5px;
+				margin-right: 10px;
+				font-weight: bold;
+				transition: .5s;
+			}
+
+			.box>.title>.checked {
+				background: linear-gradient(to bottom right, #c19a68,#a52a2a);
+				box-shadow: 0 0 28px #fff;
+			}
+
+			.box>.title>.checked>span {
+				margin-right: 35px;
+			}
+
+			.box>.title>.checked>img {
+				transform: scale(1.5);
+			}
+
+			.content {
+				background-color: rgba(255, 255, 255, .5);
+				height: 0;
+				padding: 0;
+				overflow: hidden;
+				border-radius: 30px;
+				color: #3B559B;
+				opacity: 0;
+				transition: .5s;
+			}
+
+			.che {
+				opacity: 1;
+				height: 600px;
+				padding: 20px;
+			}
+
+			.content>.smallTit {
+				font-size: 20px;
+
+			}
+
+			.content>h1 {
+				font-size: 50px;
+				margin: 20px 0;
+			}
+
+			.content>.body {
+				font-size: 18px;
+				line-height: 2;
+				text-align: justify;
+				text-indent: 2em;
+			}
+
+			.imgList {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 30px;
+			}
+
+			.imgList>img {
+				width: 47%;
+				height: 330px;
+				object-fit: cover;
+				border-radius: 30px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="tiaozhuan"><a href="首页.html">首页&gt;&gt;商城</a></div>
+		<div class="box">
+			<div class="title">
+				<div class="item">
+					<span>历史之遇</span>
+					<img src="images/tit3.png" alt="" />
+				</div>
+				<div class="item">
+					<span>千秋佳人</span>
+					<img src="images/tit1.png" alt="" />
+				</div>
+				<div class="item checked">
+					<span>大道之行</span>
+					<img src="images/tit2.png" alt="" />
+				</div>
+				<div class="item">
+					<span>璀璨波斯</span>
+					<img src="images/tit4.png" alt="" />
+				</div>
+			</div>
+			<div class="content">
+				<div class="smallTit">品味故宫Forbidden City Exhibition</div>
+				<h1>大道之行：儒家文化特展</h1>
+				<div class="body">
+					展览地点：午门及东西雁翅楼展厅
+					
+					展览时间：2024/10/01- 2025/01/05
+				</div>
+				<div class="imgList">
+					<img src="images/b1.jpg" alt="">
+					<img src="images/b2.png" alt="">
+				</div>
+			</div>
+			<div class="content">
+				<div class="smallTit">品味故宫Forbidden City Exhibition</div>
+				<h1>千秋佳人：故宫博物院藏历代人物画特展</h1>
+				<div class="body">
+					中国古代描会女性人物的绘画在广义上被统称为仕女画，是传统绘画中有着悠久历史和西要彩响的经典画科。从六朝的秀得清像，避唐的教丽丰肥，以至宋元的端严秀丽和明清的纤細妍柔，仕女画在发展过程中不仅具有显普的时代特征，塑造了众多佳人形象，更反映出各时代随政治、习俗。风尚更迭，女性社会地位和生活状态的变迁。本展是继“庙堂仪范”“林下风雅。 “众生百态”之后，故宫博物院成历代人物画特展第四期。籍此，我们不仅可以欣笑各时代画家笔下女性的地代风姿，更能从流传干古、情系家国的动人故事中体味和感悟古代女性的精神，以及其日常生活情趣。
+				</div>
+				<div class="imgList">
+					<img src="images/a1.jpg" alt="">
+					<img src="images/a2.png" alt="">
+				</div>
+			</div>
+			<div class="content che">
+				<div class="smallTit">品味故宫Forbidden City Exhibition</div>
+				<h1>历史之遇：中国与西亚古代文明交流展</h1>
+				<div class="body">
+					作为人类文明的摇篮，亚洲大陆东西两端的中国与西亚自古相识。从史前时代开始，两地农牧与手工业的互通，艺术与文化的交流互鉴，典裁于史集，融汇于生活。中国与西亚古代文明共建了丝網之路的辉煌，带动了亚欧大陆文明的共同繁荣。 本展览以故宫博物院典裁为基础，汇集国内外10家考古文博单位裁品，通过中国与西亚之间路越干年，互学互监的物证，讲达丝網之路上的中国故事，展示中华文明包容、创新的文化特质。
+				</div>
+				<div class="imgList">
+					<img src="images/c1.jpg" alt="">
+					<img src="images/c2.png" alt="">
+				</div>
+			</div>
+			<div class="content">
+				<div class="smallTit">品味故宫Forbidden City Exhibition</div>
+				<h1>璀璨波斯：伊朗文物精华展</h1>
+				<div class="body">
+					作为东西方交流的必经之地，伊朗艺术駐汇了不同族群的文化元素，在诸多领域者取得了举世眠目的成果，影响了欧亚大陆的渚多国家和地区。 本次展览荟萃伊朗多家博物馆收藏的2161件文物，希望通过建筑、雕塑、陶瓷、玻璃 、金属、书法、 绘画 等方 面 i向 广大 -观众展示伊朗艺术之美，探寻交 融互鉴的文明发展之路。
+				</div>
+				<div class="imgList">
+					<img src="images/d1.jpg" alt="">
+					<img src="images/d2.png" alt="">
+				</div>
+			</div>
+		</div>
+		<script>
+			let titlist = document.querySelectorAll('.title>.item');
+			let conlist = document.querySelectorAll('.content');
+			for (let i = 0; i < titlist.length; i++) {
+				titlist[i].onclick = function() {
+					clear();
+					titlist[i].classList.add('checked');
+					conlist[i].classList.add('che');
+				}
+			}
+
+			function clear() {
+				for (let i = 0; i < titlist.length; i++) {
+					titlist[i].classList.remove('checked');
+					conlist[i].classList.remove('che');
+				}
+			}
+		</script>
+	</body>
+</html>

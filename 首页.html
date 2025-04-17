@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{
+				width: 1689px;
+				height: 2500px;
+				margin: 0 auto;
+				background-color: white;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				
+			}
+			
+			.chao>a:link,.chao>a:visited{
+				color: white;
+				text-decoration: none;
+			}
+		
+			 a{
+				color: white;
+				text-decoration: none;
+			}
+			.top{
+				width: 1689px;
+				height: 115px;
+				margin: 0 auto;
+				background-color: green;
+				background-image: url(images/top背景.png);
+				
+			}
+			.top>.top-left{
+				width: 500px;
+				height: 115px;
+				float: left;
+				border-radius: 10px 0 0 0;
+				background-image: url(images/logo黑.jpg);
+				background-repeat: no-repeat;
+				background-position: right;
+			}
+			.top>.top-right{
+				width: 750px;
+				height: 115px;
+				float: right;
+				background-color: white;
+			}
+			.top-right>.search{
+				width: 505.5px;
+				height: 115px;
+				background-color: white;
+				float: left;
+				margin-left: 100px;
+			}
+			.top-right>.denglu{
+				width: 80px;
+				height: 38px;
+				background-color: darkred;
+				border-radius: 15px;
+				float: left;
+				line-height: 38px;
+				color: white;
+				font-size: smalle;
+				padding-left: 8px;
+				margin-left: 30px;
+				margin-top: 40px;
+			}
+			.search>form{
+				width: 505.5px;
+				height: 38px;
+				background-color: darkred;
+				position: relative;
+				top: 40px;
+			}
+			.seek-input input{
+				height: 11px;
+				width: 296px;
+				border: 2px solid darkred;
+				padding: 11px 87px 12px 16px;
+				border-right-color: darkred;
+			    color: #919292;
+			}
+			/*鼠标悬停*/
+			.seek-input input:hover{
+				border-color: #490d0d;
+				border-right-color: antiquewhite;
+			}
+			/*获得焦点*/
+			.seek-input input:focus{
+				/*去掉黑框*/
+				outline: none;
+				border-color: darkred;
+			}
+			.seek-btm input{
+				height: 36.5px;
+				width: 103px;
+				border: 0;
+				background-color: #8B0000;
+				color: white;
+				font-size: 18px;
+				position: relative;
+				top: -37.5px;
+				left: 402px;
+			}
+			/*鼠标悬停*/
+			.seek-btm input:hover{
+				background-color: #490d0d;
+			}
+			/*获得焦点*/
+			.seek-btm input:focus{
+				/*去掉黑框*/
+				outline: none;
+				background-color: darkred;
+			}
+			
+			.lead{
+				width: 1689px;
+				height: 50px;
+				margin: 0 auto;
+				background-color: black;
+				position: relative;
+				top: 0px;
+				opacity: 0.9;
+				
+			}
+			.lead>.lead-center{
+				width: 1200px;
+				height: 50px;
+				margin: 0 auto;
+				background-color: black;
+			}
+			.lead-text{
+				height: 50px;
+				width: 1200px;
+				margin: 0 auto;
+				background-color:black ;
+			}
+			.lead-text>li{
+				height: 50px;
+				width: 200px;
+				float: left;
+				line-height: 50px;
+				text-align: center;
+				color: white;
+			}
+			.lead-text>li:hover{
+				display: block;
+				background-color:royalblue ;
+			}
+			.lead-text ul{
+				display: none;
+			}
+			.lead-text>li:hover ul{
+				display: block;
+				background-color: royalblue;
+				opacity: 0.8;
+			}
+			.lead-text li li:hover{
+				background-color: darkred;
+				opacity: 0.8;
+			}
+			
+			.box{
+				width: 1689px;
+				height: 460px;
+				overflow: hidden;
+				position: relative;
+				top: 230px;
+				left: 844px;
+				transform: translate(-50%,-50%);
+			}
+			
+			.imgList{
+				position: absolute;
+				left: 0;
+				width: 1689px;
+				height: 700px;
+			}
+			.imgList>a{
+				position: absolute;
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+			.imgList>a>img{
+				display: block;
+				width: 100%;
+				height: 100%px;
+				object-fit: cover;
+			}
+			.showImg{
+				z-index: 9;
+			}
+			
+			.leftBtn,.rightBtn{
+				position: absolute;
+				top: 40%;
+				transform: translate(0,-50%);
+				font-size: 45px;
+				color: ghostwhite;
+				z-index: 99;
+				cursor: pointer;
+			}
+			.leftBtn{
+				left: 0;
+			}
+			.rightBtn{
+				right: 0;
+			}
+			.leftBtn:hover{
+				background-color: #ccc;
+			}
+			.rightBtn:hover{
+				background-color: #ccc;
+			}
+			.btn{
+			display: flex;
+			position: absolute;
+			bottom: 15px;
+			left: 50%;
+			transform: translate(-50%,0);
+			z-index: 99;
+			cursor: pointer;
+			}
+			
+			.btn>span{
+				width: 10px;
+				height: 10px;
+				border-radius: 100%;
+				background: gray;
+				margin-right: 15px;
+				cursor: pointer;
+			}
+			
+			.btn>span:last-child{
+				margin: 0;
+			}
+			
+			.btn>.checked{
+				background-color: #ccc!important;
+			}
+			.center{
+				width: 1690px;
+				height: 2230px;
+				margin: 0 auto;
+				
+				background-image: url(images/背景图片.png);
+			}
+			.center>.zhuti{
+				width: 1200px;
+				height: 2230px;
+				margin: 0 auto;
+				
+			}
+		
+			.zhuti>.box2{
+				width: 1200px;
+				height: 600px;
+				margin: 0 auto;
+				border-top: #8B0000;
+				border-top-style: solid;
+			}
+			.box2>.zhankongjian{
+				width: 1200px;
+				height: 80px;
+			}
+			.box2>.huaxia{
+				width: 120px;
+				height: 450px;
+				padding-left:80px ;
+				text-align: center;
+				writing-mode: vertical-lr;//文字垂直排列
+				line-height: 80px;
+				color: white;
+				font-size: 18px;
+				float: right;
+				border-radius: 20px 0 20px 0;
+				
+			}
+			
+			.box2>.huaxia-right{
+				width: 950px;
+				height: 450px;
+				float: left;
+			}
+			.huaxia-right>.huaxia-hang1{
+				width: 700px;
+				height: 60px;
+				margin-right: 250px;
+				background-image: url(images/祥云图腾%201.jpg);
+				background-position: 0px ,60px;
+				border-top:1px dashed yellow;
+				border-right:1px dashed yellow;
+				box-shadow:-2px 5px 15px 7px #490d0d;
+				text-align: center;
+				line-height: 60px;
+				color: white;
+				font-size: 1.2em;
+				font-weight: 520;
+			}
+			
+			.huaxia-right>.huaxia-hang2{
+			width: 800px;
+			height: 60px;
+			margin-right: 150px;
+			background-image: url(images/祥云图腾%202.jpg);
+			background-position: 0px ,60px;
+			border-bottom:1px dashed yellow;
+			border-right:1px dashed yellow;
+			box-shadow:-2px 5px 15px 7px #490d0d;
+			text-align: center;
+			line-height: 60px;
+			color: white;
+			font-size: 1.2em;
+			font-weight: 520;
+			
+			}
+			
+			.huaxia-right>.huaxia-hang3{
+			width: 600px;
+			height: 60px;
+			margin-right: 350px;
+			background-image: url(images/祥云图腾3.jpg);
+			background-position: 0px ,60px;
+			border-right:1px dashed yellow;
+			box-shadow:-2px 5px 15px 7px #490d0d;
+			text-align: center;
+			line-height: 60px;
+			color: white;
+			font-size: 1.2em;
+			font-weight: 520;
+			
+			}
+			.huaxia-right>.huaxia-hang4{
+			width: 500px;
+			height: 60px;
+			margin-right: 450px;
+			background-image: url(images/祥云图腾4.jpg);
+			background-position: 0px ,60px;
+			border-top:1px dashed yellow;
+			box-shadow:-2px 5px 15px 7px #490d0d;
+			text-align: center;
+			line-height: 60px;
+			color: white;
+			font-size: 1.2em;
+			font-weight: 520;
+			
+			}
+			.huaxia-right>.huaxia-hang5{
+			width: 700px;
+			height: 60px;
+			margin-right: 250px;
+			background-image: url(images/祥云图腾%205.jpg);
+			background-position: 0px ,60px;
+			border-bottom:1px dashed yellow;
+			box-shadow:-2px 5px 15px 7px #490d0d;
+			text-align: center;
+			line-height: 60px;
+			color: white;
+			font-size: 1.2em;
+			font-weight: 520;
+			}
+			.huaxia-right>.huaxia-hang6{
+			width: 900px;
+			height: 60px;
+			margin-right: 50px;
+			background-image: url(images/祥云图腾6.jpg);
+			background-position: 0px ,60px;
+			border-bottom:1px dashed yellow;
+			box-shadow:-2px 5px 15px 7px #490d0d;
+			text-align: center;
+			line-height: 60px;
+			color: white;
+			font-size: 1.2em;
+			font-weight: 520;
+			}
+			
+			.huaxia-hang1:hover{
+				margin-right: 200px;
+				width: 950px;
+				height: 60px;
+				background-position: 0px,60px;
+				
+			}
+			.huaxia-hang2:hover{
+				margin-right: 200px;
+				width: 950px;
+				height: 60px;
+				background-position: 0px,60px;
+				
+			}
+			.huaxia-hang3:hover{
+				margin-right: 200px;
+				width: 950px;
+				height: 60px;
+				background-position: 0px,60px;
+				
+			}
+			.huaxia-hang4:hover{
+				margin-right: 200px;
+				width: 950px;
+				height: 60px;
+				background-position: 0px,60px;
+				
+			}
+			.huaxia-hang5:hover{
+				margin-right: 200px;
+				width: 950px;
+				height: 60px;
+				background-position: 0px,60px;
+				
+			}
+			.huaxia-hang6:hover{
+				margin-right: 200px;
+				width: 950px;
+				height: 60px;
+				background-position: 0px,60px;
+				
+			}
+			.huaxia-right>.kongbai2{
+			width: 950px;
+			height: 17px;
+			
+			}
+			
+			
+			
+			.zhuti>.box3{
+				width: 1200px;
+				height: 480px;
+				margin: 0 auto;
+				opacity: 0.9;
+			}
+			.box3>.box3name{
+				width: 1200px;
+				height: 40px;
+			}
+			.box3name>.tuoyuankuang{
+				width: 130px;
+				height: 40px;
+				margin: 0 auto;
+				color: white;
+				font-size: 20px;
+				font-weight: bold;
+				line-height: 40px;
+				padding-left: 50px;
+				background-color: #3B559B;
+				border-radius: 50px;
+			}
+			.box3>.tupian{
+				width: 1200px;
+				height: 440px;
+			}
+			.tupian>.tupian1{
+				width: 300px;
+				height: 280px;
+				background-color: #4169E1;
+				float: left;
+				margin-top: 50px;
+				border-bottom: 2px solid goldenrod;
+				background-image: url(images/图书.jpg);
+			}
+			.tupian>.tupian2{
+				width: 300px;
+				height: 280px;
+				background-color: blueviolet;
+				float: left;
+				margin-top: 50px;
+				border-top: 2px solid goldenrod;
+				background-image: url(./images/视听.jpg);
+			}
+			.tupian>.tupian3{
+				width: 300px;
+				height: 280px;
+				background-color: peru;
+				float: left;
+				margin-top: 50px;
+				border-bottom: 2px solid goldenrod;
+				background-image: url(images/文物.jpg);
+			}
+			.tupian>.tupian4{
+				width: 300px;
+				height: 280px;
+				background-color: burlywood;
+				float: left;
+				margin-top: 50px;
+				border-top: 2px solid goldenrod;
+				background-image: url(images/全景.jpg);
+			}
+			.tupian1>img{
+				margin-left: 70px;
+				margin-top: 50px;
+				z-index: 99;
+				position: absolute;
+			}
+			.tupian2>img{
+				margin-left: 70px;
+				margin-top: 50px;
+				z-index: 99;
+				position: absolute;
+			}
+			.tupian3>img{
+				margin-left: 70px;
+				margin-top: 50px;
+				z-index: 99;
+				position: absolute;
+			}
+			.tupian4>img{
+				margin-left: 70px;
+				margin-top: 50px;
+				z-index: 99;
+				position: absolute;
+			}
+			.tupian1>ul{
+				width: 300px;
+				height: 280px;
+				background-color:  #3B559B;
+				position: absolute;
+				display: none;
+			}
+			.tupian2>ul{
+				width: 300px;
+				height: 280px;
+				background-color: #3B559B;
+				position: absolute;
+				display: none;
+			}
+			.tupian3>ul{
+				width: 300px;
+				height: 280px;
+				background-color: #3B559B;
+				position: absolute;
+				display: none;
+			}
+			.tupian4>ul{
+				width: 300px;
+				height: 280px;
+				background-color: #3B559B;
+				position: absolute;
+				display: none;
+			}
+			.tupian>li:hover ul{
+				display: block;
+			}
+			.zhuti>.box4{
+				width: 1200px;
+				height: 700px;
+				margin: 0 auto;
+			}
+			
+			
+			
+		.box4>.jian{
+				width: 1200px;
+				height:700px;
+				float: right;
+			}
+			.jian>.jian-text{
+				width:1200px;
+				height: 40px;
+			}
+			.jian-text>.jian-text1{
+				width: 130PX;
+				height: 40px;
+				background-color:#3B559B ;
+				color: white;
+				font-size: 20px;
+				font-weight: bold;
+				line-height: 40px;
+				padding-left: 50px;
+				margin: 0 auto;
+				border-radius: 50px;
+			}
+			.jian-text>.jian-text2{
+				width: 150PX;
+				height: 40px;
+				float: left;
+				color: black;
+				font-size: 15px;
+				line-height: 40px;
+				}
+			.jian-text>.jian-more{
+				width: 60PX;
+				height: 40px;
+				float: right;
+				color: white;
+				font-size: 15px;
+				line-height: 40px;
+				}
+			.jian-picture>.men,.dian,.he,.bao{
+				width: 1200px;
+				height: 154.5px;
+				box-shadow:-2px 5px 15px 7px #490d0d;
+			}
+			.jian-picture>.kongbai{
+				width: 1200px;
+				height: 10px;
+			}
+			.jian-picture>.kongbai1{
+				width: 1200px;
+				height: 10px;
+			}
+			.left{
+				width: 400px;
+				height: 154.5px;
+				float: left;
+			}
+			.left>img:hover{
+				width: 400px;
+				height: 154.5px;
+				margin-top: 5px;
+				margin-left: 3px;
+			}
+			.right{
+			width: 760px;
+			height: 154.5px;
+			background-color:#3B559B;
+			opacity: 0.8;
+			float: right;
+			padding-left: 20px;
+			color: white;
+			}
+			.zhuti>.box5{
+				width: 1200px;
+				height: 400px;
+				margin: 25px auto;
+				background-color:white;
+				box-shadow:-2px 5px 15px 7px #490d0d;
+			}
+			.box5 video{
+				position: relative;
+				margin: 0 auto;
+				object-fit: cover;
+				width: 1200px;
+				height: 400px;
+			}
+			.box5>video:hover{
+				width: 1190px;
+				height: 390px;
+				margin-top:5px;
+				margin-left: 5px;
+				opacity: 0.5;
+			}
+			.foot{
+				width: 1689px;
+				height: 70px;
+				margin: 0 auto;
+				background-color: #8B0000;
+				text-align: center;
+				line-height: 70px;
+				color: white;
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="top-left"></div>
+			<div class="top-right">
+				<div class="search">
+					<form action="">
+						<div class="seek-input">
+						<input type="text" placeholder="输入关键词进行搜索"/>
+						</div>
+						<div class="seek-btm">
+							<input type="submit" value="搜索" />
+						</div>
+					</form>
+				</div>
+				<div class="denglu"><a href="登录注册.html">登陆/注册</a></div>
+			</div>
+		</div>
+		
+		<div class="box">
+			<div class="imgList">
+				<a href="#" class="showImg"><img src="images/25.png" alt=""></a>
+				<a href="#"><img src="images/22.png" alt=""></a>
+				<a href="#"><img src="images/24.png" alt=""></a>
+				<a href="#"><img src="images/23.png" alt=""></a>
+				<a href="#"><img src="images/21.png" alt=""></a>
+			</div>
+			<span class="leftBtn">&lt;</span>
+			<span class="rightBtn">&gt;</span>
+			<div class="btn">
+				<span class="checked"></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</div>
+		
+		<div class="lead">
+			<div class="lead-center">
+				<ul class="lead-text">
+					<li class="shouye">首页</li>
+					<li class="about">
+						<div class="chao">
+						<a href="故宫藏品.html">故宫藏品</a>
+						</div>
+						</li>
+					<li class="help">
+						<div class="chao">
+						<a href="出游助手.html">出游助手</a>
+						</div>
+					
+					<ul>
+						<li>
+							<div class="chao">
+							<a href="出游助手.html#kaifang">开放时间</a>
+							</div></li>
+						<li>
+							<div class="chao">
+							<a href="出游助手.html#chuyou">出游路线</a>
+							</div></li>
+					</ul>
+					</li>
+					
+					<li class="play">
+						<div class="chao">
+						<a href="畅游故宫.html">畅游故宫</a>
+					</div>
+					<ul>
+						<li>
+							<div class="chao">
+							<a href="畅游故宫.html#dldt">导览地图</a>
+						</div></li>
+						<li>
+							<div class="chao">
+							<a href="畅游故宫.html#cgxz">参观须知</a>
+							</div></li>
+					</ul>
+					</li>
+					
+					<li class="feel">
+						<div class="chao">
+							<a href="品味故宫.html">品味故宫</a>
+						</div>
+					</li>
+					
+					<li class="go">
+						<div class="chao">
+						<a href="商城.html">商城</a>
+						</div>
+					</li>
+						
+				</ul>
+			</div>
+		</div>
+	
+		<div class="center">
+			<div class="zhuti">
+				
+				<div class="box2">
+					<div class="zhankongjian"></div>
+					<div class="huaxia">“祥云”图腾在中国文化中寓意着吉祥、如意、平安。<br>华夏之脉，文明之源</div>
+					<div class="huaxia-right">
+						<div class="huaxia-hang1">祥云图腾需要在发展中传承</div>
+						<div class="kongbai2"></div>
+						<div class="huaxia-hang2"> 大众化、普及化、产业化</div>
+						<div class="kongbai2"></div>
+						<div class="huaxia-hang3">打造集研发、生产、表演、展览、销售为一体的文化产业项目</div>
+						<div class="kongbai2"></div>
+						<div class="huaxia-hang4">互联网带动发展策略</div>
+						<div class="kongbai2"></div>
+						<div class="huaxia-hang5">推陈出新，实现原创性、国际性、当代性、艺术性</div>
+						<div class="kongbai2"></div>
+						<div class="huaxia-hang6">创新祥云图腾的多样化玩法，激发年轻人的兴趣</div>
+					</div>
+				</div>
+				
+				<div class="box3">
+					<div class="box3name">
+						<div class="tuoyuankuang">纵览故宫</div>
+					</div>
+					<div class="tupian">
+						<li class="tupian1"><img width="150px" height="150px" src="images/图书馆.png" >
+						<ul class="sekuai1"></ul>
+						</li>
+						
+						<li class="tupian2"><img width="150px" height="150px" src="images/视听馆.png" >
+						<ul class="sekuai2"></ul>
+						</li>
+						
+						<li class="tupian3"><img width="150px" height="150px" src="images/文物库.png" >
+						<ul class="sekuai3"></ul>
+						</li>
+						
+						<li class="tupian4"><img width="150px" height="150px" src="images/全景故宫.png" >
+						<ul class="sekuai4"></ul>
+						</li>
+						
+					</div>
+				</div>
+				
+				<div class="box4">
+					
+					<div class="jian">
+						<div class="jian-text">
+							<div class="jian-text1">故宫建筑</div>
+						</div>
+						<div class="jian-picture">
+							<div class="kongbai1"></div>
+							<div class="men">
+								<div class="left"><img src="images/太和门22.png" ></div>
+								<div class="right">
+								太和门
+								<br>太和门，位于北京市东城区北京故宫内，处于外朝中路，是故宫外朝宫殿的正门，建成于明永乐十八年（1420年），时称奉天门；清顺治二年（1645年）改名为太和门；清光绪十四年（1888年）被焚毁；清光绪十五年（1889年）重建。 太和门面阔9间，进深4间，建筑面积1371.14平方米，通高23.80米，上覆重檐歇山顶，下为汉白玉基座；梁枋上施有和玺彩画，是北京故宫内最大的宫门。
+								</div>
+							</div>
+							<div class="kongbai"></div>
+							<div class="dian">
+								<div class="left"><img src="images/太和殿22.png" ></div>
+								<div class="right">
+									太和殿
+									<br>太和殿，又称“金銮殿、至尊金殿、金銮宝殿”，位于北京市东城区景山前街4号故宫博物院内，矗立在紫禁城中央，建筑面积2377平方米， [5]是紫禁城（故宫）中最大的殿宇、 [3]东方三大殿之一 [7]。京城的中轴子午线沿着龙纹石雕御路升上三台，从天子宝座下穿过，是中国现存规制最高的古代宫殿建筑，是皇帝举行重大朝典之地。
+								</div>
+							</div>
+							<div class="kongbai"></div>
+							<div class="he">
+								<div class="left"><img src="images/中和殿22.png" ></div>
+								<div class="right">
+									中和殿
+									<br>中和殿（The Hall of Central Harmony），位于北京市东城区北京故宫内，处于故宫外朝中路区域，为故宫“三大殿”之一，始建于明永乐十八年（1420年），明天启七年（1627年）重建，清顺治二年（1645年）开始称中和殿。“中和”二字取自《中庸》 [1] [7]。中和殿高19米，平面呈正方形，面阔、进深各为3间，建筑面积580平方米，为单檐四角攒尖顶。明清两朝，皇帝会在举行大典前先在中和殿小憩，而后由中和殿前往太和殿；凡遇皇帝亲祭，皇帝会于前一日在中和殿阅视祝文 [1]。
+								</div>
+							</div>
+							<div class="kongbai"></div>
+							<div class="bao">
+								<div class="left"><img src="images/保和殿22.jpg" ></div>
+								<div class="right">
+									保和殿
+									<br>保和殿（The Hall of Preserving Harmony），又称谨身殿、建极殿，位于北京市东城区景山前街4号北京故宫内，始建于明永乐十八年（1420年），明嘉靖年间重修，是外朝三大殿之一。 保和殿面阔九间，进深五间，建筑面积1240平方米，高29.5米，重檐歇山顶，黄琉璃瓦屋面，殿内金砖铺地，坐北向南设雕镂金漆宝座。 东、西两梢间为暖阁。
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="box5">
+					<video width="1190px" height="280px" src="images/视频3.mp4" autoplay muted loop type="video/mp4"></video>
+				</div>
+			</div>
+		</div>
+		
+		
+		<div class="foot">
+			中国故宫@版权所有
+		</div>
+		<script>
+			window.onload=function(){
+				var imgList = document.querySelectorAll(".imgList>a");
+				var btnList = document.querySelectorAll(".box>.btn>span");
+				var lbtn = document.querySelector(".leftBtn");
+				var rbtn = document.querySelector(".rightBtn");
+				var time = 3000;
+				var index = 0;
+				var dingshiqi;
+				start();
+				function start(){
+					dingshiqi = setInterval(function(){
+						index==imgList.length - 1 ? index=0 : index++;
+						switchPublic();
+					},time)
+				}
+				function switchPublic(){
+					for(var i =0;i<imgList.length;i++){
+						imgList[i].classList.remove('showImg')
+						btnList[i].classList.remove('checked')
+					}
+					imgList[index].classList.add('showImg')
+					btnList[index].classList.add('checked')
+				}
+				lbtn.onclick=function(){
+					clearInterval(dingshiqi)
+					index==0 ? index = imgList.length - 1 : index--;
+					switchPublic();
+					start();
+				}
+				rbtn.onclick=function(){
+					clearInterval(dingshiqi)
+					index == imgList.length - 1 ? index = 0 : index ++;
+					switchPublic();
+					start();
+				}
+				for(let i = 0;i<btnList.length;i++){
+					btnList[i].onclick=function(){
+						clearInterval(dingshiqi)
+						index = i;
+						switchPublic();
+						start();
+					}
+				}
+			}
+		</script>
+	</body>
+</html>

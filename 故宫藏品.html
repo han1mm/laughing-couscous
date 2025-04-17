@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{
+				width: 1689px;
+				height: 3000px;
+				margin: 0 auto;
+				background-color: #008000;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+				
+			}
+			
+			.chao>a:link,.chao>a:visited{
+				color: white;
+				text-decoration: none;
+			}
+			
+			 a{
+				color: white;
+				text-decoration: none;
+				}
+			.top{
+				width: 1689px;
+				height: 115px;
+				margin: 0 auto;
+				background-color: green;
+				background-image: url(images/top背景.png);
+				
+			}
+			.top>.top-left{
+				width: 500px;
+				height: 115px;
+				float: left;
+				
+				border-radius: 10px 0 0 0;
+				background-image: url(images/logo黑.jpg);
+				background-repeat: no-repeat;
+				background-position: right;
+				}
+			.top>.top-right{
+				width: 750px;
+				height: 115px;
+				float: right;
+				background-color: white;
+			}
+			.top-right>.search{
+				width: 505.5px;
+				height: 115px;
+				background-color: white;
+				float: left;
+				margin-left: 100px;
+			}
+			.top-right>.denglu{
+				width: 80px;
+				height: 38px;
+				background-color: darkred;
+				border-radius: 15px;
+				float: left;
+				line-height: 38px;
+				color: white;
+				font-size: smalle;
+				padding-left: 8px;
+				margin-left: 30px;
+				margin-top: 40px;
+			}
+			.search>form{
+				width: 505.5px;
+				height: 38px;
+				background-color: darkred;
+				position: relative;
+				top: 40px;
+			}
+			.seek-input input{
+				height: 11px;
+				width: 296px;
+				border: 2px solid darkred;
+				padding: 11px 87px 12px 16px;
+				border-right-color: darkred;
+			    color: #919292;
+			}
+			/*鼠标悬停*/
+			.seek-input input:hover{
+				border-color: #490d0d;
+				border-right-color: antiquewhite;
+			}
+			/*获得焦点*/
+			.seek-input input:focus{
+				/*去掉黑框*/
+				outline: none;
+				border-color: darkred;
+			}
+			.seek-btm input{
+				height: 36.5px;
+				width: 103px;
+				border: 0;
+				background-color: #8B0000;
+				color: white;
+				font-size: 18px;
+				position: relative;
+				top: -37.5px;
+				left: 402px;
+			}
+			/*鼠标悬停*/
+			.seek-btm input:hover{
+				background-color: #490d0d;
+			}
+			/*获得焦点*/
+			.seek-btm input:focus{
+				/*去掉黑框*/
+				outline: none;
+				background-color: darkred;
+			}
+			
+			.lead{
+				width: 1689px;
+				height: 50px;
+				margin: 0 auto;
+				background-color: darkred;
+			}
+			.lead>.lead-center{
+				width: 1200px;
+				height: 50px;
+				margin: 0 auto;
+				background-color: white;
+			}
+			.lead-text{
+				height: 50px;
+				width: 1200px;
+				margin: 0 auto;
+				background-color:darkred ;
+			}
+			.lead-text>li{
+				height: 50px;
+				width: 200px;
+				float: left;
+				line-height: 50px;
+				text-align: center;
+				color: white;
+			}
+			.lead-text>li:hover{
+				display: block;
+				background-color:royalblue ;
+			}
+			.lead-text ul{
+				display: none;
+			}
+			.lead-text>li:hover ul{
+				display: block;
+				background-color: royalblue;
+				opacity: 0.8;
+			}
+			.lead-text li li:hover{
+				background-color: darkred;
+				opacity: 0.8;
+			}
+			
+			.center{
+				width: 1689px;
+				height: 3000px;
+				margin: 0 auto;
+				background-color: white;
+			}
+			.center>.zhuti{
+				width: 1200px;
+				height: 2300px;
+				margin: 0 auto;
+				background-color:white;
+			}
+			.zhuti>.box1{
+				width: 1200px;
+				height: 80px;
+				margin: 0 auto;
+				background-color: white;
+			}
+			
+			
+			.zhuti>.box2{
+				width: 1200px;
+				height: 430px;
+				margin: 0 auto;
+				background-color: white;
+			}
+			
+			
+			.zhuti>.box3{
+				width: 1200px;
+				height: 790px;
+				margin: 0 auto;
+				background-color: white;
+			}
+			.box3-tu1{
+				width: 1200px;
+				height: 140px;
+				background-color: white;
+				margin:0 auto;
+			}
+			.tu1-biaoti{
+				width: 200px;
+				height: 60px;
+				background-color: white;
+				margin: 0 auto;
+				position: relative;
+				top: 60px;
+			}
+			.tu1-biaoti>.tu1-left{
+				width: 40px;
+				height: 60px;
+				background-color: white;
+				float: left;
+			}
+			.tu1-biaoti>.tu1-left>img{
+				float: left;
+				width: 26px;
+				height: 50px;
+				margin-top: 8px;
+			}
+			.tu1-biaoti>.tu1-img{
+				width: 120px;
+				height: 60px;
+				background-color: white;
+				float: left;
+			}
+			.tu1-biaoti>.tu1-right{
+				width: 40px;
+				height: 60px;
+				background-color: white;
+				float: left;
+			}
+			.tu1-biaoti>.tu1-right>img{
+				float: right;
+				width: 26px;
+				height: 50px;
+				margin-top: 8px;
+			}
+			.hang-1{
+				width: 1200px;
+				height: 320px;
+				background-color: white;
+			}
+			.hang-2{
+				width: 1200px;
+				height: 320px;
+				background-color: white;
+				margin-top: 10px;
+			}
+			.hang-1>li{
+				height: 320px;
+				width: 228px;
+				background-color:white;
+				float: left;
+				margin-left: 10px;
+			}
+			.hang-2>li{
+				height: 320px;
+				width: 228px;
+				background-color: white;
+				float: left;
+				margin-left: 10px;
+			}
+			.hang-1>li>img:hover{
+				width: 223px;
+				height: 315px;
+				margin-top: 2.5px;
+				margin-bottom: 2.5px;
+				margin-left: 2.5px;
+				margin-right: 2.5px;
+			}
+			.hang-2>li>img:hover{
+				width: 223px;
+				height: 315px;
+				margin-top: 2.5px;
+				margin-bottom: 2.5px;
+				margin-left: 2.5px;
+				margin-right: 2.5px;
+			}
+			.zhuti>.box4{
+				width: 1200px;
+				height: 1000px;
+				margin: 0 auto;
+				background-color: white;
+			}
+			.box4-tu2{
+				width: 1200px;
+				height: 140px;
+				background-color: white;
+				margin:0 auto;
+			}
+		.tu2-biaoti{
+			width: 320px;
+			height: 60px;
+			background-color: white;
+			margin: 0 auto;
+			position: relative;
+			top: 60px;
+		}
+		.tu2-biaoti>.tu2-left{
+			width: 40px;
+			height: 60px;
+			background-color: white;
+			float: left;
+		}
+		.tu2-biaoti>.tu2-left>img{
+			float: left;
+			width: 26px;
+			height: 50px;
+			margin-top: 8px;
+		}
+		.tu2-biaoti>.tu2-img{
+			width: 240px;
+			height: 60px;
+			background-color: white;
+			float: left;
+		}
+		.tu2-biaoti>.tu2-right{
+			width: 40px;
+			height: 60px;
+			background-color: white;
+			float: left;
+		}
+		.tu2-biaoti>.tu2-right>img{
+			float: right;
+			width: 26px;
+			height: 50px;
+			margin-top: 8px;
+		}
+		.hanga{
+			width: 1200px;
+			height: 350px;
+			background-color:white;
+		}
+		.a-left{
+			width: 595px;
+			height: 350px;
+			background-color: white;
+			float: left;
+			
+		}
+		.a-right{
+			width: 595px;
+			height: 350px;
+			background-color: white;
+			float: left;
+			margin-left: 10px;
+			
+		}
+		.shang{
+			width: 595px;
+			height: 170px;
+			background-color: #3B559B;
+		}
+		.shang>p{
+			width: 500px;
+			height: 120px;
+			color: white;
+			font-size: small;
+			text-indent: 2em;
+			line-height: 20px;
+			position: relative;
+			top: 40px;
+			left: 40px;
+			
+		}
+		.xia{
+			width: 595px;
+			height: 170px;
+			background-color:white;
+			margin-top: 10px;
+		}
+		.xia>li{
+			height: 170px;
+			width: 292px;
+			background-color: white;
+			float: left;
+			margin-left: 5px;
+		}
+		.hangb{
+			width: 1200px;
+			height: 245px;
+			background-color:white;
+			margin-top: 10px;
+		}
+		.hangb>li{
+			width: 288px;
+			height: 245px;
+			background-color: white;
+			margin-left: 10px;
+			float: left;
+		}
+		.hangc{
+			width: 1200px;
+			height: 245px;
+			background-color: white;
+			margin-top: 10px;
+		}
+		.hangc>li{
+			width: 288px;
+			height: 245px;
+			background-color: white;
+			margin-left: 10px;
+			float: left;
+		}
+		
+		.tai2{
+			width: 575px;
+			height: 60px;
+			background-color: black;
+			position: absolute;
+			top: 1895px;
+			color: white;
+			opacity: 0.7;
+			line-height: 60px;
+			padding-left: 20px;
+		}
+		.zhong{
+			width: 272px;
+			height: 60px;
+			background-color: black;
+			position: relative;
+			top: -64px;
+			color: white;
+			opacity: 0.7;
+			line-height: 60px;
+			padding-left: 20px;
+		}
+		.bao{
+			width: 272px;
+			height: 60px;
+			background-color: black;
+			position: relative;
+			top: -64px;
+			color: white;
+			opacity: 0.7;
+			line-height: 60px;
+			padding-left: 20px;
+		}
+		.qian,.jiao,.kun,.xian,.shou,.yang,.chu,.huang2{
+			width: 268px;
+			height: 60px;
+			background-color: black;
+			position: relative;
+			top: -64px;
+			color: white;
+			opacity: 0.7;
+			line-height: 60px;
+			padding-left: 20px;
+		}
+		.a-left>img:hover{
+			width: 590px;
+			height: 345px;
+			margin-top: 2.5px;
+			margin-bottom: 2.5px;
+			margin-left: 2.5px;
+			margin-right: 2.5px;
+		}
+		.xia>li>img:hover{
+			height: 165px;
+			width: 287px;
+			margin-top: 2.5px;
+			margin-bottom: 2.5px;
+			margin-left: 2.5px;
+			margin-right: 2.5px;
+		}
+		.hangb>li>img:hover{
+			width: 278px;
+			height: 240px;
+			margin-top: 2.5px;
+			margin-bottom: 2.5px;
+			margin-left: 2.5px;
+			margin-right: 2.5px;
+		}
+		.hangc>li>img:hover{
+			width: 278px;
+			height: 240px;
+			margin-top: 2.5px;
+			margin-bottom: 2.5px;
+			margin-left: 2.5px;
+			margin-right: 2.5px;
+		}
+			.box-5{
+				width: 1200px;
+				height:700px;
+				margin:0 auto;
+				background-color: white;
+			}
+			.box5-tu3{
+					width: 1200px;
+					height: 140px;
+					background-color: white;
+					margin:0 auto;
+				}
+			.p{
+				width: 1200px;
+				height: 540px;
+				background-color: white;	
+			}
+			.p>img:hover{
+				width: 1195px;
+				height: 535px;
+				margin-top: 2.5px;
+				margin-bottom: 2.5px;
+				margin-left: 2.5px;
+				margin-right: 2.5px;
+			}
+		
+			
+			.tu3-biaoti{
+				width: 320px;
+				height: 60px;
+				background-color: white;
+				margin: 0 auto;
+				position: relative;
+				top: 60px;
+			}
+			.tu3-biaoti>.tu3-left{
+				width: 40px;
+				height: 60px;
+				background-color: white;
+				float: left;
+			}
+			.tu3-biaoti>.tu3-left>img{
+				float: left;
+				width: 26px;
+				height: 50px;
+				margin-top: 8px;
+			}
+			.tu3-biaoti>.tu3-img{
+				width: 240px;
+				height: 60px;
+				background-color: white;
+				float: left;
+			}
+			.tu3-biaoti>.tu3-right{
+				width: 40px;
+				height: 60px;
+				background-color: white;
+				float: left;
+			}
+			.tu3-biaoti>.tu3-right>img{
+				float: right;
+				width: 26px;
+				height: 50px;
+				margin-top: 8px;
+			}
+			.foot{
+				width: 1689px;
+				height: 70px;
+				margin: 0 auto;
+				background-color: #8B0000;
+				text-align: center;
+				line-height: 70px;
+				color: white;
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="top-left"></div>
+			<div class="top-right">
+				<div class="search">
+					<form action="">
+						<div class="seek-input">
+						<input type="text" placeholder="输入关键词进行搜索"/>
+						</div>
+						<div class="seek-btm">
+							<input type="submit" value="搜索" />
+						</div>
+					</form>
+				</div>
+				<div class="denglu"><a href="登录注册.html">登陆/注册</a></div>
+			</div>
+		</div>
+		
+		<div class="lead">
+			<div class="lead-center">
+				<ul class="lead-text">
+					<li class="shouye">
+						<div class="chao">
+						<a href="首页.html">首页</a>
+						</div>
+						</li>
+					<li class="about">
+						<div class="chao">
+						<a href="故宫藏品.html">故宫藏品</a>
+						</div>
+						</li>
+					<li class="help">
+						<div class="chao">
+						<a href="出游助手.html">出游助手</a>
+						</div>
+					
+					<ul>
+						<li>
+							<div class="chao">
+							<a href="出游助手.html#kaifang">开放时间</a>
+							</div></li>
+						<li>
+							<div class="chao">
+							<a href="出游助手.#chuyou">出游路线</a>
+							</div></li>
+					</ul>
+					</li>
+					
+					<li class="play">
+						<div class="chao">
+						<a href="畅游故宫.html">畅游故宫</a>
+					</div>
+					<ul>
+						<li>
+							<div class="chao">
+							<a href="畅游故宫.html#dldt">导览地图</a>
+						</div></li>
+						<li>
+							<div class="chao">
+							<a href="畅游故宫.html#cgxz">参观须知</a>
+							</div></li>
+					</ul>
+					</li>
+					
+					<li class="feel">
+						<div class="chao">
+							<a href="品味故宫.html">品味故宫</a>
+						</div>
+					</li>
+					
+					<li class="go">
+						<div class="chao">
+						<a href="商城.html">商城</a>
+						</div>
+					</li>
+						
+				</ul>
+			</div>
+		</div>
+
+		<div class="center">
+			<div class="zhuti">
+				<div class="box1"></div>
+				<div class="box2"><img src="images/藏top.jpg" ></div>
+				<div class="box3">
+					<div class="box3-tu1">
+						<div class="tu1-biaoti">
+							<div class="tu1-left">
+								<img src="images/边框.png">
+							</div>
+							<div class="tu1-img">
+								<img src="images/专馆.png"  >
+							</div>
+							<div class="tu1-right">
+								<img src="images/边框2.png">
+							</div>
+						</div>
+					</div>
+					<div class="hang-1">
+						<li><a><img src="images/数字.jpg" ></a></li>
+						<li><a><img src="images/古建.jpg" ></a></li>
+						<li><a><img src="images/书画.jpg" ></a></li>
+						<li><a href="https://gugongzhanlan.dpm.org.cn/exhibitShare/140"><img src="images/陶瓷.jpg" ></a></li>
+						<li><a href="https://gugongzhanlan.dpm.org.cn/exhibitShare/16"><img src="images/雕塑.jpg" ></a></li>
+					</div>
+					<div class="hang-2">
+						<li><a><img src="images/青铜器.jpg" ></a></li>
+						<li><a href="https://gugongzhanlan.dpm.org.cn/exhibitShare/23"><img src="images/钟表.jpg" ></a></li>
+						<li><a href="https://gugongzhanlan.dpm.org.cn/exhibitShare/83"><img src="images/珍宝.jpg" ></a></li>
+						<li><a><img src="./images/戏曲.jpg" ></a></li>
+						<li><a href="https://gugongzhanlan.dpm.org.cn/exhibitShare/75"><img src="images/家具.jpg" ></a></li>
+					</div>
+				</div>
+				
+				<div class="box4">
+					<div class="box4-tu2">
+						<div class="tu2-biaoti">
+							<div class="tu2-left">
+								<img src="images/边框.png">
+							</div>
+							<div class="tu2-img">
+							<img src="images/陈列.png" >
+							</div>
+							<div class="tu2-right">
+								<img src="images/边框2.png">
+							</div>
+						</div>
+					</div>
+					<div class="hanga">
+						<div class="a-left"><a href="https://www.dpm.org.cn/explore/building/236465.html"><img src="images/原太和.png" ><div class="tai2">太和殿</div></a></div>
+						<div class="a-right">
+							<div class="shang">
+								<p>原状陈列是故宫博物院历史悠久、极具特色，且深受广大观众喜爱的展览类型。原状宫殿中的陈设都是严格遵循历史档案记载去选择与布置，力求恢复历史原貌，让观众能够真切地感受到厚重的历史文化氛围。这些精美的文物藏品与历尽沧桑的古代建筑一起构成和谐统一的整体，蕴含着丰富的历史信息和文化内涵，向世人形象地展示宫廷文化。</p>
+								</div>
+							<div class="xia">
+								<li><a href="https://www.dpm.org.cn/explore/building/236464.html"><img src="images/原中和.png" ><div class="zhong">中和殿</div></a></li>
+								<li><a href="https://www.dpm.org.cn/explore/building/236434.html"><img src="images/原保和.png" ><div class="bao">保和殿</div></a></li>
+							</div>
+							
+						</div>
+					</div>
+					<div class="hangb">
+						<li><a href="https://www.dpm.org.cn/explore/building/236472.html"><img src="images/乾清宫.jpg" ><div class="qian">乾清宫</div></a></li>
+						<li><a href="https://www.dpm.org.cn/explore/building/236467.html"><img src="images/交泰殿.jpg" ><div class="jiao">交泰殿</div></a></li>
+						<li><a href="https://www.dpm.org.cn/explore/building/236487.html"><img src="images/坤宁宫.png" ><div class="kun">坤宁宫</div></a></li>
+						<li><a href="https://www.dpm.org.cn/explore/building/236534.html"><img src="images/咸若宫.png" ><div class="xian">咸若宫</div></a></li>
+					</div>
+					<div class="hangc">
+						<li><a href="https://gugongzhanlan.dpm.org.cn/exhibitShare/13"><img src="images/寿康宫.png" ><div class="shou">寿康宫</div></a></li>
+						<li><a href="https://www.dpm.org.cn/explore/building/236442.html"><img src="./images/养心殿.png" ><div class="yang">养心殿</div></a></li>
+						<li><a href="https://www.dpm.org.cn/explore/building/236486.html"><img src="images/储秀宫.png" ><div class="chu">储秀宫</div></a></li>
+						<li><a href="https://www.dpm.org.cn/explore/building/236476.html"><img src="images/皇极殿.jpg" ><div class="huang2">皇极殿</div>s</li>
+					</div>
+					</div>
+				<div class="box-5">
+					<div class="box5-tu3">
+						<div class="tu3-biaoti">
+							<div class="tu3-left">
+								<img src="images/边框.png">
+							</div>
+							<div class="tu3-img">
+							<img src="images/走外.png" >
+							</div>
+							<div class="tu3-right">
+								<img src="images/边框2.png">
+							</div>
+						</div>
+					</div>
+					<div class="p">
+							<img src="./images/茶.jpg" >
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		<div class="foot">中国故宫@版权所有</div>
+	</body>
+</html>

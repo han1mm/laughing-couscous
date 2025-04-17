@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>故宫博物院 - 文创商城</title>
+    <style>
+        /* 基础样式 */
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .site-header {
+            background-color: #8b0000;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        .site-header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .site-header nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0 0;
+        }
+
+        .site-header nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        .site-header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        .site-footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 30px;
+        }
+
+        /* 商城特有样式 */
+        .shop-header {
+            background-color: #f5f5f5;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .back-to-home {
+            display: inline-block;
+            padding: 8px 15px;
+            background-color: #8b0000;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+        
+        .products-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+        
+        .product-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 4px;
+        }
+        
+        .product-title {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #333;
+        }
+        
+        .product-price {
+            font-size: 16px;
+            color: #8b0000;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        .add-to-cart {
+            background-color: #8b0000;
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .add-to-cart:hover {
+            background-color: #6b0000;
+        }
+        
+        .cart-notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            border-radius: 4px;
+            display: none;
+            z-index: 1000;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .products-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .products-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- 故宫网页原有头部 -->
+    <header class="site-header">
+        <h1>故宫博物院</h1>
+        <nav>
+            <ul>
+              <div class="lead">
+                <div class="lead-center">
+                    <ul class="lead-text">
+                        <li class="shouye">
+                            <div class="chao">
+                            <a href="首页.html">首页</a>
+                            </div></li>
+                        <li class="about">
+                            <div class="chao">
+                            <a href="故宫藏品.html">故宫藏品</a>
+                            </div>
+                            </li>
+                        <li class="help">
+                                <a href="出游助手.html">出游助手</a>
+                        </li>
+                        <li class="play">
+                            <a href="畅游故宫.html">畅游故宫</a>
+                        </li>
+                        <li class="feel">
+                            <a href="品味故宫.html">品味故宫</a>
+                        </li>
+                        <li class="go">
+                            <div class="chao">
+                            <a href="商城.html">商城</a>
+                            </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 商城部分 -->
+    <div class="shop-container">
+        <div class="shop-header">
+            <h2>故宫文创商城</h2>
+            <p>精选故宫文化创意产品</p >
+        </div>
+        
+        <div class="products-container">
+            <!-- 商品1 -->
+            <div class="product-card">
+                <img src="./images/故日历.jpg" alt="故宫日历" class="product-image">
+                <h3 class="product-title">故宫日历2025</h3>
+                <p class="product-price">¥88.00</p >
+                <button class="add-to-cart" data-id="1" data-name="故宫日历2025" data-price="88">加入购物车</button>
+            </div>
+            
+            <!-- 商品2 -->
+            <div class="product-card">
+                <img src="./images/故扇子.jpg" alt="千里江山图折扇" class="product-image">
+                <h3 class="product-title">千里江山图折扇</h3>
+                <p class="product-price">¥128.00</p >
+                <button class="add-to-cart" data-id="2" data-name="千里江山图折扇" data-price="128">加入购物车</button>
+            </div>
+            
+            <!-- 商品3 -->
+            <div class="product-card">
+                <img src="./images/故猫.jpg" alt="故宫猫摆件" class="product-image">
+                <h3 class="product-title">故宫猫摆件</h3>
+                <p class="product-price">¥68.00</p >
+                <button class="add-to-cart" data-id="3" data-name="故宫猫摆件" data-price="68">加入购物车</button>
+            </div>
+            
+            <!-- 商品4 -->
+            <div class="product-card">
+                <img src="./images/故书签.jpg" alt="故宫建筑书签" class="product-image">
+                <h3 class="product-title">故宫建筑书签</h3>
+                <p class="product-price">¥38.00</p >
+                <button class="add-to-cart" data-id="4" data-name="故宫建筑书签" data-price="38">加入购物车</button>
+            </div>
+            
+            <!-- 商品5 -->
+            <div class="product-card">
+                <img src="./images/故钥匙扣.jpg" alt="故宫瑞兽钥匙扣" class="product-image">
+                <h3 class="product-title">故宫瑞兽钥匙扣</h3>
+                <p class="product-price">¥45.00</p >
+                <button class="add-to-cart" data-id="5" data-name="故宫瑞兽钥匙扣" data-price="45">加入购物车</button>
+            </div>
+            
+            <!-- 商品6 -->
+            <div class="product-card">
+                <img src="./images/故丝巾.jpg" alt="故宫纹样丝巾" class="product-image">
+                <h3 class="product-title">故宫纹样丝巾</h3>
+                <p class="product-price">¥198.00</p >
+                <button class="add-to-cart" data-id="6" data-name="故宫纹样丝巾" data-price="198">加入购物车</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- 购物车通知 -->
+    <div class="cart-notification" id="cartNotification">
+        商品已加入购物车！
+    </div>
+
+    <!-- 故宫网页原有页脚 -->
+    <footer class="site-footer">
+        <p>&copy; 2025 故宫博物院 版权所有</p >
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 获取所有"加入购物车"按钮
+            const addToCartButtons = document.querySelectorAll('.add-to-cart');
+            const cartNotification = document.getElementById('cartNotification');
+            
+            // 初始化购物车
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+            
+            // 为每个按钮添加点击事件
+            addToCartButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // 获取商品信息
+                    const productId = this.getAttribute('data-id');
+                    const productName = this.getAttribute('data-name');
+                    const productPrice = parseFloat(this.getAttribute('data-price'));
+                    
+                    // 检查商品是否已在购物车中
+                    const existingItem = cart.find(item => item.id === productId);
+                    
+                    if (existingItem) {
+                        // 如果已存在，增加数量
+                        existingItem.quantity += 1;
+                    } else {
+                        // 如果不存在，添加到购物车
+                        cart.push({
+                            id: productId,
+                            name: productName,
+                            price: productPrice,
+                            quantity: 1
+                        });
+                    }
+                    
+                    // 保存到本地存储
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                    
+                    // 显示通知
+                    cartNotification.style.display = 'block';
+                    
+                    // 3秒后隐藏通知
+                    setTimeout(() => {
+                        cartNotification.style.display = 'none';
+                    }, 3000);
+                    
+                    // 更新购物车总数显示（如果有）
+                    updateCartCount();
+                });
+            });
+            
+            // 更新购物车总数函数
+            function updateCartCount() {
+                const cartCountElements = document.querySelectorAll('.cart-count');
+                const totalItems = cart.reduce((total, item) => total + item.quantity, 0);
+                
+                cartCountElements.forEach(element => {
+                    element.textContent = totalItems;
+                });
+            }
+            
+            // 初始化时更新购物车数量
+            updateCartCount();
+        });
+    </script>
+</body>
+</html>
