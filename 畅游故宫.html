@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{
+				width: 1689px;
+				height: 2000px;
+				margin: 0 auto;
+				background-color: white;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			a:link,a:visited{
+				color: white;
+				text-decoration: none;
+				
+			}
+			.chao>a:link,.chao>a:visited{
+				color: white;
+				text-decoration: none;
+			}
+			.tiao>a:link,.tiao>a:visited{
+				color: black;
+				text-decoration: none;
+			}
+			a:hover{
+				color: white;
+				text-decoration: none;
+			}
+			 a{
+				color: white;
+				text-decoration: none;
+			}
+		.top{
+			width: 1689px;
+			height: 115px;
+			margin: 0 auto;
+			background-color: green;
+			background-image: url(images/top背景.png);
+			
+		}
+		.top>.top-left{
+			width: 500px;
+			height: 115px;
+			float: left;
+			
+			border-radius: 10px 0 0 0;
+			background-image: url(images/logo黑.jpg);
+			background-repeat: no-repeat;
+			background-position: right;
+			}
+		.top>.top-right{
+			width: 750px;
+			height: 115px;
+			float: right;
+			background-color: white;
+		}
+		.top-right>.search{
+			width: 505.5px;
+			height: 115px;
+			background-color: white;
+			float: left;
+			margin-left: 100px;
+		}
+		.top-right>.denglu{
+			width: 80px;
+			height: 38px;
+			background-color: darkred;
+			border-radius: 15px;
+			float: left;
+			line-height: 38px;
+			color: white;
+			font-size: smalle;
+			padding-left: 8px;
+			margin-left: 30px;
+			margin-top: 40px;
+		}
+			.search>form{
+				width: 505.5px;
+				height: 38px;
+				background-color: darkred;
+				position: relative;
+				top: 40px;
+			}
+			.seek-input input{
+				height: 11px;
+				width: 296px;
+				border: 2px solid darkred;
+				padding: 11px 87px 12px 16px;
+				border-right-color: darkred;
+			    color: #919292;
+			}
+			/*鼠标悬停*/
+			.seek-input input:hover{
+				border-color: #490d0d;
+				border-right-color: antiquewhite;
+			}
+			/*获得焦点*/
+			.seek-input input:focus{
+				/*去掉黑框*/
+				outline: none;
+				border-color: darkred;
+			}
+			.seek-btm input{
+				height: 36.5px;
+				width: 103px;
+				border: 0;
+				background-color: #8B0000;
+				color: white;
+				font-size: 18px;
+				position: relative;
+				top: -37.5px;
+				left: 402px;
+			}
+			/*鼠标悬停*/
+			.seek-btm input:hover{
+				background-color: #490d0d;
+			}
+			/*获得焦点*/
+			.seek-btm input:focus{
+				/*去掉黑框*/
+				outline: none;
+				background-color: darkred;
+			}
+			
+			.lead{
+				width: 1689px;
+				height: 50px;
+				margin: 0 auto;
+				background-color: darkred;
+				position: absolute;
+			}
+			.lead>.lead-center{
+				width: 1200px;
+				height: 50px;
+				margin: 0 auto;
+				background-color: white;
+			}
+			.lead-text{
+				height: 50px;
+				width: 1200px;
+				margin: 0 auto;
+				background-color:darkred ;
+			}
+			.lead-text>li{
+				height: 50px;
+				width: 200px;
+				float: left;
+				line-height: 50px;
+				text-align: center;
+				color: white;
+			}
+			.lead-text>li:hover{
+				display: block;
+				background-color:royalblue ;
+			}
+			.lead-text ul{
+				display: none;
+			}
+			.lead-text>li:hover ul{
+				display: block;
+				background-color: royalblue;
+				opacity: 0.8;
+			}
+			.lead-text li li:hover{
+				background-color: darkred;
+				opacity: 0.8;
+			}
+			
+			
+			
+			.zhan{
+				width: 1200px;
+				height: 150px;
+				background-color: white;
+				margin: 0 auto;
+			}
+			.zhan2{
+				width: 1200px;
+				height: 100px;
+				background-color: white;
+				margin: 0 auto;
+			}
+			.ditu{
+				width: 1200px;
+				height: 800px;
+				background-color: white;
+				margin: 0 auto;
+			}
+			.tittle{
+				width: 200px;
+				height: 60px;
+				background-color: white;
+				margin: 0 auto;
+			}
+			.t-left{
+				width: 40px;
+				height: 60px;
+				background-color: white;
+				float: left;
+			}
+			.t-middle{
+				width: 120px;
+				height: 60px;
+				background-color: white;
+				float: left;
+			}
+			.t-right{
+				width: 40px;
+				height: 60px;
+				background-color: white;
+				float: right;
+			}
+			.t-left>img{
+				float: left;
+				width: 22px;
+				height: 35px;
+				margin-top: 15px;
+			}
+			.t-middle{
+				width: 120px;
+				height: 60px;
+				background-color: white;
+				float: left;
+				font-size: 1.5em;
+				text-align: center;
+				line-height: 60px;
+				color: #00282D;
+			}
+			.t-right>img{
+				float: right;
+				width: 22px;
+				height: 35px;
+				margin-top: 15px;
+			}
+			.an{
+				width: 300px;
+				height: 740px;
+				background-color: papayawhip;
+				float: left;
+			}
+			.pic{
+				width: 900px;
+				height: 740px;
+				background-color: #cc9966;
+				float: left;
+				background-image: url(images/背.jpg);
+			}
+			
+			.an>ul>li:hover{
+				font-size: 0.8em;	
+				background-color:brown;
+				opacity: 0.8;
+			}
+			.yes1:hover{
+				font-size: 1.7em;
+				background-color:brown;
+				opacity: 0.8em;
+			}
+			.yes1{
+				list-style-type: circle;
+				width: 280px;
+				height: 50px;
+				background-color: papayawhip;
+				margin-left: 20px;
+				line-height: 50px;
+				font-size: 1.5em;
+				
+			}
+			.no1{
+			list-style-type: circle;
+			width: 280px;
+			height: 120px;
+			background-color: papayawhip;	
+			margin-left: 20px;
+			font-size: 1.5em;
+			}
+			.t21,.t22,.t23{
+				list-style: none;
+				width: 260px;
+				height: 30px;
+				background-color: papayawhip;	
+				margin-left: 20px;
+				font-size: 0.7em;
+				list-style-type: disc;
+			}
+			.yes{
+				width: 280px;
+				height: 250px;
+				background-color: papayawhip;
+				margin-left: 20px;
+				font-size: 1.5em;
+			}
+			
+			
+			.f41,.f42,.f43,.f44,.f45{
+				list-style: none;
+				width: 260px;
+				height: 30px;
+				background-color: papayawhip;	
+				margin-left: 20px;
+				font-size: 0.7em;
+				list-style-type: disc;
+			}
+			.er{
+				width: 260px;
+				height: 200px;
+				background-color: papayawhip;
+				margin-left: 50px;
+				margin-top: 60px;
+			}
+			.xuzhi{
+				width: 1200px;
+				height: 730px;
+				background-color: white;
+				margin: 0 auto;
+			}
+			.xuzhi1{
+				width: 300px;
+				height: 40px;
+				background-color: white;
+				margin: 15px auto;
+				border: darkgoldenrod;
+				border-style: solid;
+				text-align: center;
+				line-height: 40px;
+				color: darkgoldenrod
+				
+			}
+			.xuzhi2{
+				width: 300px;
+				height: 40px;
+				background-color: white;
+				margin: 15px auto;
+				border: darkgoldenrod;
+				border-style: solid;
+				text-align: center;
+				line-height: 40px;
+				color: darkgoldenrod;
+			}
+			.xuzhi1:hover{
+				background-color: darkgoldenrod;
+				color: white;
+			}
+			.xuzhi2:hover{
+				background-color: darkgoldenrod;
+				color: white;
+			}
+			.tit-text{
+				width: 850px;
+				height: 50px;
+				background-color: white;
+				margin: 0 auto;
+				color: black;
+				font-size: small;
+				text-indent: 2em;
+				line-height: 20px;
+			}
+			.hang1,.hang3{
+				width: 1200px;
+				height: 110px;
+				background-color: white;
+			}
+			.hang2,.hang4{
+				width: 1200px;
+				height: 110px;
+				background-color:white;
+			}
+			.hang1-left{
+				width: 600px;
+				height: 110px;
+				background-color: white;
+				float: left;
+			}
+			.hang2-left{
+				width: 600px;
+				height: 110px;
+				background-color: white;
+				float: left;
+			}
+			.hang3-left{
+				width: 600px;
+				height: 110px;
+				background-color: white;
+				float: left;
+			}
+			.hang4-left{
+				width: 600px;
+				height: 110px;
+				background-color: white;
+				float: left;
+			}
+			.hang2,.hang4{
+				width: 1200px;
+				height: 110px;
+				background-color: white;
+			}
+			.hang1-right{
+				width: 600px;
+				height: 110px;
+				background-color: white;
+				float: left;
+			}
+			.hang2-right{
+				width: 600px;
+				height: 110px;
+				background-color: white;
+				float: left;
+			}
+			.hang3-right{
+				width: 600px;
+				height: 110px;
+				background-color: white;
+				float: left;
+			}
+			.hang4-right{
+				width: 600px;
+				height: 110px;
+				background-color: white;
+				float: left;
+			}
+			.hang-pic{
+				width: 110px;
+				height: 110px;
+				background-color: white;
+				float: left;
+			}
+			.hang-pic>img{
+				margin-top: 10px;
+			}
+			.hang-pic>img:hover{
+				width: 100px;
+				height: 100px;
+			}
+			.big{
+				width:600px;
+				height: 50px;
+				background-color: white;
+				line-height: 60px;
+			}
+			.small{
+				width: 600px;
+				height: 60px;
+				background-color: white;
+				line-height: 20px;
+				font-size: small;
+				
+			}
+			.di{
+				width: 1689px;
+				height: 250px;
+				background-color: white;
+				margin: 0 auto;
+			}
+			.foot{
+				width: 1689px;
+				height: 70px;
+				margin: 0 auto;
+				background-color: #8B0000;
+				text-align: center;
+				line-height: 70px;
+				color: white;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="top-left"></div>
+			<div class="top-right">
+				<div class="search">
+					<form action="">
+						<div class="seek-input">
+						<input type="text" placeholder="输入关键词进行搜索"/>
+						</div>
+						<div class="seek-btm">
+							<input type="submit" value="搜索" />
+						</div>
+					</form>
+				</div>
+				<div class="denglu"><a href="登录注册.html">登陆/注册</a></div>
+			</div>
+		</div>
+		
+		<div class="lead">
+			<div class="lead-center">
+				<ul class="lead-text">
+					<li class="shouye">
+						<div class="chao">
+						<a href="首页.html">首页</a>
+						</div></li>
+					<li class="about">
+						<div class="chao">
+						<a href="故宫藏品.html">故宫藏品</a>
+						</div>
+						</li>
+					<li class="help">
+							<a href="出游助手.html">出游助手</a>
+					<ul>
+						<li><a href="出游助手.html#kaifang">开放时间</a>
+						</li>
+							<li><a href="出游助手.html#chuyou">出游路线</a></li>
+					</ul>
+					</li>
+					<li class="play">
+						<a href="畅游故宫.html">畅游故宫</a>
+					<ul>
+						<li><a href="#dldt">导览地图</a></li>
+						<li><a href="#cgxz">参观须知</a></li>
+					</ul>
+					</li>
+					<li class="feel">
+						<a href="品味故宫.html">品味故宫</a>
+					</li>
+					<li class="go">
+						<div class="chao">
+						<a href="商城.html">商城</a>
+						</div>
+						</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="zhan"></div>
+		<div class="ditu">
+			<div class="tittle">
+				<div class="t-left">
+					<img src="images/边框.png" >
+				</div>
+				<div class="t-middle">
+					<p id="dldt">导览地图</p></div>
+				<div class="t-right">
+					<img src="images/边框2.png" >
+				</div>
+			</div>
+			<!--左边切换-->
+			<div class="an">
+			<ul class="yes1" onclick="a()">故宫博物院开放区域</ul>
+			<ul class="no1">推荐路线
+			    <li class="t21" onclick="b()">两小时游</li>
+			    <li class="t22" onclick="c()">半日游</li>
+			    <li class="t23" onclick="d()">一日游</li>
+			</ul>
+			<ul class="yes">服务设施
+			    <li class="f41" onclick="i()">餐饮</li>
+				<li class="f42" onclick="j()">卫生间</li>
+				<li class="f43" onclick="k()">商店</li>
+				<li class="f44" onclick="l()">母婴室</li>
+				<li class="f45" onclick="m()">医务</li>
+			
+			</ul>
+			<div class="er">
+				<img src="images/二维码.png">
+			</div>
+			</div>
+			<!--右边展示图片-->
+			<div class="pic"><img src="images/开放区域.png" id="img"></div>
+		</div>
+		
+		
+		
+		<div class="zhan2"></div>
+		<div class="xuzhi">
+			<div class="tittle">
+				<div class="t-left">
+					<img src="images/边框.png" >
+				</div>
+				<div class="t-middle">
+					<p id="cgxz">参观须知</p>
+				</div>
+				<div class="t-right">
+					<img src="images/边框2.png" >
+				</div>
+			</div>
+			<div class="xuzhi1">故宫博物院参观须知</div>
+			<div class="xuzhi2">故宫博物院禁止携带物品目录</div>
+			<div class="tit-text">
+				自2011年7月2日起，故宫博物院实行自南向北单向参观路线：午门（南门）只作为参观入口，观众一律从午门进入故宫；神武门（北门）只作为参观出口，观众参观结束后可由神武门或东华门（东门）离开故宫。
+			</div>
+			<div class="hang1">
+				<div class="hang1-left">
+					<div class="hang-pic"><img src="images/左1.png" ,width="90p" , height="90px"></div>
+					<ul class="big">您在故宫博物院内参观游览时请勿吸烟，并提醒他人不要吸烟</ul>
+					<ul class="small">故宫是世界上现存最大的木结构宫殿建筑群，历史上曾经多次发生火灾。每个点燃的烟头都可能是对这片珍贵历史文化遗产的威胁。</ul>
+				</div>
+				<div class="hang1-right">
+					<div class="hang-pic"><img src="images/右1.png" ,width="90px" , height="90px"></div>
+					<ul class="big">尊重文化遗产，保护文物古迹</ul>
+					<ul class="small">请不要在古建筑和古树上留下您的大名，刻画涂写不仅不会使您英名永驻，反而遭到大家的鄙视。</ul>
+				</div>
+			</div>
+			<div class="hang2">
+				<div class="hang2-left">
+					<div class="hang-pic"><img src="images/左2.png" ,width="9px" , height="90px"></div>
+					<ul class="big">做文明观众</ul>
+					<ul class="small">为不妨碍、影响他人参观，按照国际惯例在展厅请勿使用闪光灯和三脚架拍照。在我院与其他博物馆合作举办的展览以及特色商品店，因有版权协议，不允许观众拍照展品，请注意警示标志并服从展厅工作人员的管理。</ul>
+				</div>
+				<div class="hang2-right">
+					<div class="hang-pic"><img src="images/右2.png" ,width="90px" , height="90px"></div>
+					<ul class="big">如遇人群密集时，请听从工作人员的疏导，有序参观，不要拥挤</ul>
+					<ul class="small">请不要轻信和接受社会散杂人员派发的各种广告和兜售的商品。严防上当受骗，并欢迎举报。故宫派出所电话：022－66666882</ul>
+				</div>
+			</div>
+			<div class="hang3">
+				<div class="hang3-left">
+					<div class="hang-pic"><img src="images/左3.png" ,width="90px" , height="90px"></div>
+					<ul class="big">欢迎利用我院提供的各种导览帮助设施</ul>
+					<ul class="small">咨询电话：400-950-1111查看院内服务设施位置图讲解服务路线与讲解服务收费标准</ul>
+				</div>
+				<div class="hang3-right">
+					<div class="hang-pic"><img src="images/右3.png" ,width="90px" , height="90px"></div>
+					<ul class="big">文明环境靠大家共同营造</ul>
+					<ul class="small">请勿携带宠物进院参观。<br>请保持衣容整洁。不要做出有碍观瞻、有损形象的行为。</ul>
+				</div>
+			</div>
+			<div class="hang4">
+				<div class="hang4-left">
+					<div class="hang-pic"><img src="images/左4.png" ,width="90px" , height="90px"></div>
+					<ul class="big">在您参观时请留意自己携带的物品，提防扒窃</ul>
+					<ul class="small">请不要轻信和接受社会散杂人员派发的各种广告和兜售的商品。严防上当受骗，并欢迎举报。
+故宫派出所电话：010－6333333</ul>
+				</div>
+				<div class="hang4-right">
+					<div class="hang-pic"><img src="images/右4.png" ,width="90px" , height="90px"></div>
+					<ul class="big">如果您在参观中遇到紧急情况，就近寻求我院工作人员的帮助</ul>
+					<ul class="small">如果您与亲友在参观中走失，可到景运门内西南侧的广播室通知他们。咨询电话：000-666-13525。查看故宫全景图</ul>
+				</div>
+			</div>
+		</div>
+		<div class="di"><img src="images/页面底部.png" ></div>
+		<div class="foot">中国故宫@版权所有</div>
+		<!--js-->
+		<script>
+			function a(){
+				document.getElementById('img').src='images/开放区域.png'
+			}
+			function b(){
+				document.getElementById('img').src='images/2小时.jpg'
+			}
+			function c(){
+				document.getElementById('img').src='images/半日游.jpg'
+			}
+			function d(){
+				document.getElementById('img').src='images/一日游.jpg'
+			}
+			function i(){
+				document.getElementById('img').src='images/餐饮.jpg'
+			}
+			function j(){
+				document.getElementById('img').src='images/卫生间.png'
+			}
+			function k(){
+				document.getElementById('img').src='images/商店.png'
+			}
+			function l(){
+				document.getElementById('img').src='images/母婴室.png'
+			}
+			function m(){
+				document.getElementById('img').src='images/医务.jpg'
+			}
+		</script>
+	</body>
+</html>
