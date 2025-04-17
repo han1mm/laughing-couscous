@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body{
+				width: 1689px;
+				height: 2000px;
+				margin: 0 auto;
+				background-color: white;
+			}
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			a:link,a:visited{
+				color: white;
+				text-decoration: none;
+				
+			}
+			.chao>a:link,.chao>a:visited{
+				color: white;
+				text-decoration: none;
+			}
+			.tiao>a:link,.tiao>a:visited{
+				color: black;
+				text-decoration: none;
+			}
+			a:hover{
+				color: white;
+				text-decoration: none;
+			}
+			 a{
+				color: white;
+				text-decoration: none;
+			}
+	.top{
+		width: 1689px;
+		height: 115px;
+		margin: 0 auto;
+		background-color: green;
+		background-image: url(images/top背景.png);
+		
+	}
+	.top>.top-left{
+		width: 500px;
+		height: 115px;
+		float: left;
+		
+		border-radius: 10px 0 0 0;
+		background-image: url(images/logo黑.jpg);
+		background-repeat: no-repeat;
+		background-position: right;
+		}
+			.top>.top-right{
+				width: 750px;
+				height: 115px;
+				float: right;
+				background-color: white;
+			}
+			.top-right>.search{
+				width: 505.5px;
+				height: 115px;
+				background-color: white;
+				float: left;
+				margin-left: 100px;
+			}
+			.top-right>.denglu{
+				width: 80px;
+				height: 38px;
+				background-color: darkred;
+				border-radius: 15px;
+				float: left;
+				line-height: 38px;
+				color: white;
+				font-size: smalle;
+				padding-left: 8px;
+				margin-left: 30px;
+				margin-top: 40px;
+			}
+			.search>form{
+				width: 505.5px;
+				height: 38px;
+				background-color: darkred;
+				position: relative;
+				top: 40px;
+			}
+			.seek-input input{
+				height: 11px;
+				width: 296px;
+				border: 2px solid darkred;
+				padding: 11px 87px 12px 16px;
+				border-right-color: darkred;
+			    color: #919292;
+			}
+			/*鼠标悬停*/
+			.seek-input input:hover{
+				border-color: #490d0d;
+				border-right-color: antiquewhite;
+			}
+			/*获得焦点*/
+			.seek-input input:focus{
+				/*去掉黑框*/
+				outline: none;
+				border-color: darkred;
+			}
+			.seek-btm input{
+				height: 36.5px;
+				width: 103px;
+				border: 0;
+				background-color: #8B0000;
+				color: white;
+				font-size: 18px;
+				position: relative;
+				top: -37.5px;
+				left: 402px;
+			}
+			/*鼠标悬停*/
+			.seek-btm input:hover{
+				background-color: #490d0d;
+			}
+			/*获得焦点*/
+			.seek-btm input:focus{
+				/*去掉黑框*/
+				outline: none;
+				background-color: darkred;
+			}
+			
+			.lead{
+				width: 1689px;
+				height: 50px;
+				margin: 0 auto;
+				background-color: darkred;
+				position: absolute;
+			}
+			.lead>.lead-center{
+				width: 1200px;
+				height: 50px;
+				margin: 0 auto;
+				background-color: white;
+			}
+			.lead-text{
+				height: 50px;
+				width: 1200px;
+				margin: 0 auto;
+				background-color:darkred ;
+			}
+			.lead-text>li{
+				height: 50px;
+				width: 200px;
+				float: left;
+				line-height: 50px;
+				text-align: center;
+				color: white;
+			}
+			.lead-text>li:hover{
+				display: block;
+				background-color:royalblue ;
+			}
+			.lead-text ul{
+				display: none;
+			}
+			.lead-text>li:hover ul{
+				display: block;
+				background-color: royalblue;
+				opacity: 0.8;
+			}
+			.lead-text li li:hover{
+				background-color: darkred;
+				opacity: 0.8;
+			}
+			
+			.qihang{
+				width: 1200px;
+				height: 500px;
+				margin: 0 auto;
+				background-color:yellow ;
+			}
+		
+			.qihang-tu1{
+				width: 1200px;
+				height: 200px;
+				background-color: white;
+				margin: 0 auto;
+			}
+			.cou{
+				width: 1200px;
+				height: 120px;
+				background-color: white;
+			}
+			.tu1-box1{
+				width: 300px;
+				height: 60px;
+				background-color: white;
+				margin: auto;
+			}
+			.tu1-box1>.tu1-left{
+				width: 40px;
+				height: 60px;
+				background-color: white;
+				float: left;
+			}
+			.tu1-box1>.tu1-left>img{
+				float: left;
+				width: 22px;
+				height: 35px;
+				margin-top: 15px;
+			}
+			.tu1-box1>.tu1-text1{
+				width: 220px;
+				height: 60px;
+				background-color: white;
+				float: left;
+				font-size: 1.5em;
+				text-align: center;
+				line-height: 60px;
+				color: #00282D;
+			}
+			.tu1-box1>.tu1-right{
+				width: 40px;
+				height: 60px;
+				background-color: white;
+				float: left;
+			}
+			.tu1-right>img{
+				float: right;
+				width: 22px;
+				height: 35px;
+				margin-top: 15px;
+			}
+			.qihang-body{
+				width: 1200px;
+				height: 340px;
+				background-color: white;
+			}
+			.qihang-left{
+				width: 500px;
+				height: 340px;
+				background-color: white;
+				float: left;
+				background-image: url(images/雪景0.jpg);
+			}
+			.ok{
+			width: 500px;
+			height: 340px;
+			
+			}
+			.kaifang-logo{
+				width: 220px;
+				height: 340px;
+				float: left;
+				margin-left: 20px;
+			}
+			.luxian-logo{
+				width: 220px;
+				height: 340px;
+				float: left;
+				margin-left: 20px;
+			}
+			.logo1,.logo3{
+				width: 170px;
+				height: 180px;
+				margin: auto;
+				margin-top: 30px;
+			}
+			.logo2,.logo4{
+				width: 200px;
+				height: 100px;
+				margin: auto;
+				margin-top: 20px;
+				line-height: 17px;
+				text-align: center;
+				color: dimgray;
+			}
+			.qihang-right{
+			width: 700px;
+			height: 340px;
+			background-color: #8B0000;
+			float: left;
+			}
+			.right-top{
+				width: 200px;
+				height: 60px;
+				background-color: white;
+			}
+			.right-top>.right-top-left{
+				width: 40px;
+				height: 60px;
+				background-color: #8B0000 ;
+				float: left;
+			}
+			.right-top>.right-top-left>img{
+				float: left;
+				width: 22px;
+				height: 35px;
+				margin-top: 15px;
+			}
+			.right-top>.right-top-text{
+				width: 120px;
+				height: 60px;
+				background-color:  #8B0000;
+				float: left;
+				font-size: 1.5em;
+				text-align: center;
+				line-height: 60px;
+				color: white;
+			}
+			.right-top>.right-top-right{
+				width: 40px;
+				height: 60px;
+				background-color:  #8B0000;
+				float: left;
+			}
+			.right-top-right>img{
+				float: right;
+				width: 22px;
+				height: 35px;
+				margin-top: 15px;
+			}
+			.shang{
+				width:700px ;
+				height: 92px;
+				background-color:  #8B0000;
+				border-bottom: goldenrod;
+				border-bottom-style: solid;
+				border-width: 1px;
+			}
+			
+			.zhong{
+				width:700px ;
+				height: 92px;
+				background-color:  #8B0000;
+				border-bottom: goldenrod;
+				border-bottom-style: solid;
+				border-width: 0.5px;
+			}
+			.xia{
+				width:700px ;
+				height: 92px;
+				background-color:s#8B0000;
+			}
+			.shang>.li1{
+				width: 680px;
+				height: 30px;
+				background-color:  #8B0000;
+				list-style-type: circle;
+				color: white;
+				font-size: larger;
+				padding-left: 20px;
+				
+			}
+			.shang>.li2{
+				width: 640px;
+				height: 62px;
+				background-color:  #8B0000;
+				color: gainsboro;
+				font-size: 1em;
+				line-height: 25px;
+				padding-left: 40px;
+				padding-right: 20px;
+			}
+			.zhong>.li1{
+				width: 680px;
+				height: 30px;
+				background-color:  #8B0000;
+				list-style-type: circle;
+				color: white;
+				font-size: larger;
+				padding-left: 20px;
+			}
+			.zhong>.li2{
+				width: 640px;
+				height: 62px;
+				background-color:  #8B0000;
+				color: gainsboro;
+				font-size: 1em;
+				line-height: 25px;
+				padding-left: 40px;
+				padding-right: 20px;
+			}
+			.xia>.li1{
+				width: 680px;
+				height: 30px;
+				background-color:  #8B0000;
+				list-style-type: circle;
+				color: white;
+				font-size: larger;
+				padding-left: 20px;
+			}
+			.xia>.li2{
+				width: 640px;
+				height: 62px;
+				background-color:  #8B0000;
+				color: gainsboro;
+				font-size: 1em;
+				line-height: 25px;
+				padding-left: 40px;
+				padding-right: 20px;
+			}
+			.shijian {
+				width: 1200px;
+				height: 750px;
+				margin: 0 auto;
+				background-color:white ;
+			}	
+		
+			.shijian-tu1{
+				width: 1200px;
+				height: 160px;
+				background-color: white;
+				margin:0 auto;
+			}
+			.tu1-box2{
+				width: 200px;
+				background-color: white;
+				margin: 0 auto;
+				position: relative;
+				top: 40px;
+			}
+			.tu1-box2>.tu1-left{
+				width: 40px;
+				height: 60px;
+				background-color: white;
+				float: left;
+			}
+			.tu1-box2>.tu1-left>img{
+				float: left;
+				width: 22px;
+				height: 35px;
+				margin-top: 15px;
+			}
+			.tu1-box2>.tu1-text2,.tu1-text3{
+				width: 120px;
+				height: 60px;
+				background-color: white;
+				float: left;
+				font-size: 1.5em;
+				text-align: center;
+				line-height: 60px;
+				color: #00282D;
+			}
+			.tu1-box2>.tu1-right{
+				width: 40px;
+				height: 60px;
+				background-color: white;
+				float: left;
+			}
+			.tu1-box2>.tu1-right>img{
+				float: right;
+				width: 22px;
+				height: 35px;
+				margin-top: 15px;
+			}
+			.shijian-text{
+				width: 1200px;
+				height: 70px;
+				background-color: white;
+				margin: 0 auto;
+			}
+			.shijian-text>p{
+				width:1000px ;
+				height: 70px;
+				margin:auto;
+				text-indent: 2em;
+				line-height: 25px;
+				text-align: center;
+				color: gray;
+				background-color: white;
+			}
+			.shijian-tu2{
+				width: 1200px;
+				height: 520px;
+				background-color: white;
+				margin: 0 auto;
+			}
+			
+			.luxian{
+				width: 1200px;
+				height: 800px;
+				margin: 0 auto;
+				background-color:white ;
+			}
+			.luxian-tu1{
+				width: 1200px;
+				height: 160px;
+				background-color: white;
+				margin: 0 auto;
+			}
+			.luxian-body{
+				width: 1200px;
+				height: 630px;
+				background-color: green;
+			}
+			.luxian-left{
+				width: 500px;
+				height: 640px;
+				background-color: white;
+				float: left;
+				
+			}
+			.luxian-right{
+			width: 700px;
+			height: 630px;
+			float: right;
+			background-color: #996600;
+			}
+			.simen{
+				width: 700px;
+				height: 630px;
+				background-color:#996600;
+			}
+			.simen>.yuan{
+				width: 700px;
+				height: 150px;
+				background-color: #996600;
+				
+			}
+			.simen>.yuan>li{
+				width: 150px;
+				height: 150px;
+				background-color:#8B0000  ;
+				float: left;
+				margin-left: 20px;
+				line-height: 150px;
+				text-align: center;
+				color: white;
+				border-radius: 100px;
+				font-size: 1.5em;
+				font-family: "华文中宋";
+				box-shadow:-5px 1px 15px 2px #490d0d;
+				opacity: 0.8;
+				background-image: url(images/圆圈.png);
+			}
+			.wen1{
+				
+				font-size: 1.5em;
+				font-family: "华文中宋";
+				color: white;
+				position: absolute;
+				top: 1585px;
+				left: 816px;
+				
+			}
+			.wen2{
+				
+				font-size: 1.5em;
+				font-family: "华文中宋";
+				color: white;
+				position: absolute;
+				top: 1585px;
+				left: 976px;
+			}
+			.wen3{
+				
+				font-size: 1.5em;
+				font-family: "华文中宋";
+				color: white;
+				position: absolute;
+				top: 1585px;
+				left: 1146px;
+			}
+			.wen4{
+				
+				font-size: 1.5em;
+				font-family: "华文中宋";
+				color: white;
+				position: absolute;
+				top: 1585px;
+				left: 1313px;
+			}
+			.yuan>li:hover{
+					transition: all 2s;
+					transform: rotate(180deg);
+				}
+			.tuoyuan{
+				width: 700px;
+				height: 350px;
+				background-color: #996600;
+			}
+			.tuoyuan>li{
+				width: 130px;
+				height: 330px;
+				float: left;
+				background-color:#8B0000 ;
+				margin-left: 20px;
+				line-height: 30px;
+				color: white;
+				border-radius: 20px 20px 60px 60px;
+				font-size: 1em;
+				writing-mode: vertical-lr;//文字垂直排列
+				text-indent: 2em;
+				font-family: "仿宋";
+				padding-left: 20px;
+				padding-top: 20px;
+				box-shadow:3px 1px 15px 2px #490d0d;
+				opacity: 0.7;
+			}
+			
+			.zhuyi{
+				width: 700px;
+				height: 130px;
+				background-color:#8B0000 ;
+				opacity: 0.3;
+
+			}
+			.zhuyi>li{
+				color: white;
+				margin-left: 40px;
+				font-size: 0.8em;
+				line-height: 20px;
+			}
+			.dibu{
+				width: 1689px;
+				height: 100px;
+				margin: 0 auto;
+				background-color: white;
+			}
+			.foot{
+				width: 1689px;
+				height: 60px;
+				margin: 0 auto;
+				background-color: #8B0000;
+				text-align: center;
+				line-height: 60px;
+				color: white;
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div class="top">
+			<div class="top-left"></div>
+			<div class="top-right">
+				<div class="search">
+					<form action="">
+						<div class="seek-input">
+						<input type="text" placeholder="输入关键词进行搜索"/>
+						</div>
+						<div class="seek-btm">
+							<input type="submit" value="搜索" />
+						</div>
+					</form>
+				</div>
+				<div class="denglu"><a href="登录注册.html">登陆/注册</a></div>
+			</div>
+		</div>
+		
+		<div class="lead">
+			<div class="lead-center">
+				<ul class="lead-text">
+					<li class="shouye">
+						<div class="chao">
+						<a href="首页.html">首页</a>
+						</div></li>
+					<li class="about">
+						<div class="chao">
+						<a href="故宫藏品.html">故宫藏品</a>
+						</div>
+						</li>
+					<li class="help">
+							<a href="出游助手.html">出游助手</a>
+					<ul>
+						<li><a href="#kaifang">开放时间</a>
+					</li>
+						<li><a href="#chuyou">出游路线</a></li>
+					</ul>
+					</li>
+					<li class="play">
+						<a href="畅游故宫.html">畅游故宫</a>
+					<ul>
+						<li><a href="畅游故宫.html#dldt">导览地图</a></li>
+						<li><a href="畅游故宫.html#cgxz">参观须知</a></li>
+					</ul>
+					</li>
+					<li class="feel">
+						<a href="品味故宫.html">品味故宫</a>
+					</li>
+					<li class="go">
+						<div class="chao">
+						<a href="商城.html">商城</a>
+						</div>
+						</li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="qihang">
+			
+			<div class="qihang-tu1">
+				<div class="cou"></div>
+				<div class="tu1-box1">
+					<div class="tu1-left">
+						<img src="images/边框.png">
+					</div>
+					<div class="tu1-text1">
+						<p id="chufa">故宫之旅，即刻启航</p>
+					</div>
+					<div class="tu1-right">
+						<img src="images/边框2.png" >
+					</div>
+				</div>
+			</div>
+			
+			<div class="qihang-body">
+				
+				<div class="qihang-left">
+					<div class="ok">
+					<div class="kaifang-logo">
+						<div class="logo1"><a href="#kaifang"><img src="./images/开放时间.png" ></a></div>
+						<div class="logo2">
+						<h2>
+							<div class="tiao">
+							<a href="#kaifang">【开放时间】</a>
+						</div>
+						</h2>
+						<h4><br>让这场旅行更“准时”</h4></div>
+					</div>
+					<div class="luxian-logo">
+						<div class="logo3"><a href="#chuyou"><img src="images/交通路线.png" ></a></div>
+						<div class="logo4">
+						<h2>
+							<div class="tiao">
+								<a href="#chuyou">【出游路线】</a>
+							</div>
+							</h2>
+						<h4><br>让您行程更便捷</h4></div>
+					</div>	
+					</div>
+				</div>
+				
+				<div class="qihang-right">
+					<div class="right-top">
+						<div class="right-top-left">
+							<img src="images/边框.png">
+						</div>
+						<div class="right-top-text">开放公告</div>
+						<div class="right-top-right">
+							<img src="images/边框2.png">
+						</div>
+					</div>
+					<div class="shang">
+						<li class="li1"><a href="" title="关于2024年医务人员和志愿者主题免费开放日的公告">关于2024年医务人员和志愿者主题免费开放日的公告</a></li>
+						<li class="li2">2024年11月6日（周三），故宫博物院对医务人员和志愿者免费开放，免费范围包括大门票、钟表馆、珍宝馆。医务人员与志愿者主题免费票于10月30日20:00开始预约...</li>
+					</div>
+					<div class="zhong">
+						<li class="li1"><a href="" title="故宫博物院关于雕版馆暂时闭馆的通知">故宫博物院关于雕版馆暂时闭馆的通知</a></li>
+						<li class="li2">因展厅维护，太和门内东南崇楼及朝房雕版馆“吉光片羽——故宫博物院藏清代宫廷雕版文物展”于2024年8月5日至9月14日暂时闭馆。给您参观带来不便，敬请谅解。</li>
+					</div>
+					<div class="xia">
+						<li class="li1"><a href="" title="故宫博物院关于继续关闭慈宁宫花园区域的公告">故宫博物院关于继续关闭慈宁宫花园区域的公告</a></li>
+						<li class="li2">因文物保护工作需要，自2024年7月21日（周日）至2024年8月20日（周二），慈宁宫花园区域将继续关闭。给您参观带来不便，敬请谅解。</li>
+					</div>
+				</div>
+				
+				
+			</div>
+		</div>
+		
+		<div class="shijian">
+			<div class="shijian-tu1">
+				<div class="tu1-box2">
+					<div class="tu1-left">
+						<img src="images/边框.png">
+					</div>
+					<div class="tu1-text2">
+						<p id="kaifang">开放时间</p>
+					</div>
+					<div class="tu1-right">
+						<img src="images/边框2.png">
+					</div>
+				</div>
+			</div>
+			<div class="shijian-text">
+				<p>故宫博物院全年开放，开放时间按照淡、旺季会有所改变，遇到法定假期也会延长或缩短开放时间，请随时注意本网站的公告！如果遇到重大活动或特殊情况，开放时间如有改变，故宫网站将特别发布公告。除法定节假日外，故宫博物院全年实行周一全天闭馆的措施。</p>
+			</div>
+			<div class="shijian-tu2">
+				<img src="images/时间.jpeg" >
+			</div>
+		</div>
+		
+		<div class="luxian">
+			<div class="luxian-tu1">
+				<div class="tu1-box2">
+					<div class="tu1-left">
+						<img src="images/边框.png"></div>
+					<div class="tu1-text3">
+						<p id="chuyou">出游路线</p>
+					</div>
+					<div class="tu1-right">
+						<img src="images/边框2.png">
+					</div>
+				</div>
+			</div>
+			<div class="luxian-body">
+				<div class="luxian-left">
+					<a href="https://ditu.amap.com/search?id=B000A8UIN8&city=110101&geoobj=111.455731%7C34.093376%7C114.109971%7C35.282156&query_type=IDQ&query=%E6%95%85%E5%AE%AB%E5%8D%9A%E7%89%A9%E9%99%A2&zoom=9.34"><img src="images/导航.jpg" ></a>
+				</div>
+				<div class="luxian-right">
+					<div class="simen">
+							<ul class="yuan">
+								<li></li>
+								<div class="wen1">午门</div>
+								<li></li>
+								<div class="wen2">神武门</div>
+								<li></li>
+								<div class="wen3">西华门</div>
+								<li></li>
+								<div class="wen4">东华门</div>
+							</ul>
+							<ul class="tuoyuan">
+								<li>
+									<h3>午门（故宫博物院的南门）</h3>
+									<h5>从东华门或西华门沿东、西筒子河路前行均可到达。从天安门经端门到达午门的路线：通行时间周二至周日，8:00-16:00；周一闭馆日全天不可通行……</h5>
+								</li>
+								<li>
+									<h3>神武门（故宫博物院的北门）</h3>
+								<h5>与 景山公园 隔街相对;神武门周边的公共交通车站：神武门;停靠的车辆：101、103、109、124路无轨电车和58、夜13路、观光1线、观光2线公共汽车……</h5>
+								</li>
+								<li>
+									<h3>东华门（故宫博物院的东门）</h3>
+									<h5>从 王府井商业街 沿 东安门大街 西行800米可以到达。</h5>
+									<h5>东华门周边的公共交通车站：东华门、故宫东门</h5>
+									<h5>停靠的车辆：2、82、夜2路、观光2线公共汽车</h5>
+								</li>
+								<li>
+									<h3>西华门（故宫博物院的西门）</h3>
+									<h5>从 长安街 沿 南长街 北行600米或从北海公园 沿 北长街 南行600米可以到达。西华门周边的公共交通车站：西华门、故宫西门
+停靠的车辆：5路、观光1线……</h5>
+								</li>
+							</ul>
+							<ul class="zhuyi">
+								<li class="li3">
+									<br><br>请注意：
+									<br>故宫博物院没有专用停车场，最近的公共停车场在景山后街，车位有限。
+									<br>建议观众朋友们搭乘公共交通车辆来故宫博物院参观。</li>
+							</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dibu"></div>
+		<div class="foot">
+			中国故宫@版权所有
+		</div>
+	</body>
+</html>
